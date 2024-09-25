@@ -40,9 +40,27 @@
 
 /* PERSO EN ATTENTE DE REWORKS */
 
+a {
+  color: black;  
+  text-decoration: none;
+}
+
 .button {
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: auto;
+  padding: 30px;
   border: black 1px solid;
+  border-radius: 30px;
   background-color: gray;
+
+}
+
+.choiceOption {
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  
 }

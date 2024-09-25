@@ -50,7 +50,7 @@ export const data = [
     {
         id: 3,
         title: "A quel moment puis je le/la rappeler ?",
-        choiceOne: { text: "Retour", target: "/" },
+        choiceOne: { text: "Prise de note, Fin , merci retour", target: "/" }, // Je vous remercie pour votre accueil, bonne fin de journée
         choiceTwo: { text: "Ne veux pas répondre", target: "/" },
         choiceThree: { text: null, target: "/" },
     },

@@ -14,9 +14,12 @@ export default function Choose({ index }) {
             <h1> Etape {index} </h1>
             <p>{stor.title}</p>
 
-            <Button message={stor.choiceOne.text} target={stor.choiceOne.target} />
-            <Button message={stor.choiceTwo.text} target={stor.choiceTwo.target}/>
-            <Button message={stor.choiceThree.text} target={stor.choiceThree.target} />
+            <div className="choiceOption">
+                <Button message={stor.choiceOne.text} target={stor.choiceOne.target} />
+                <Button message={stor.choiceTwo.text} target={stor.choiceTwo.target}/>
+                <Button message={stor.choiceThree.text} target={stor.choiceThree.target} />                
+            </div>
+
         </>
     )
 
