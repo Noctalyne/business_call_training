@@ -1,53 +1,47 @@
 import './style/App.css';
 
-import Choose from './story/Choose.js';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import Navigation from './Navigation.js';
-import Template from './Template.js';
+import NavigationRoutes from './components/NavigationRoutes.js';
+import Header from './components/header/Header.js';
+import { UserDataProvider } from './context/UserContext.js';
+import { StoryDataProvider } from './context/StoryContext.js';
+import { ContextDataProvider } from './context/Context.js';
 
 // import Formulaire from './Formulaire';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Template/>
-  },
-
-  {
-    path: '/etape0',
-    element: <Choose index={0} />
-  },
-  {
-    path: '/etape1',
-    element: <Choose index={1} />
-  },
-  {
-    path: '/etape2',
-    element: <Choose index={2} />
-  },
-
-  {
-    path: '/etape3',
-    element: <Choose index={3} />
-  },
-
-  {
-    path: '/etape4',
-    element: <Choose index={4} />
-  },
-
-  {
-    path: '/etape5',
-    element: <Choose index={5} />
-  },
-
-]);
-
-
-
 function App() {
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+
+      {/* <UserDataProvider>
+        <StoryDataProvider> */}
+
+        <ContextDataProvider>
+          <div className="App">
+
+            <header className="App-header">
+
+              <Header />
+
+            </header>
+
+            <main className='mainContainer'>
+
+              {/* Function pour gérer les routes */}
+              <NavigationRoutes />
+
+            </main>
+
+          </div>
+          
+          </ContextDataProvider>
+        {/* </StoryDataProvider>
+      </UserDataProvider> */}
+
+
+    </>
+  )
+
 }
 
 export default App;

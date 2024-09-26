@@ -7,9 +7,7 @@ export default function Button({ message, target }) {
             <>
                 {/* <button onClick={handleOnClic()}> */}
                 <div className="button" >
-                    {/* Test */}
                     <Link to={target}>{message}</Link>
-
                 </div>
             </>
         )
