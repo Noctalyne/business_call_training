@@ -1,63 +1,37 @@
-// import { createContext, useContext, useState } from "react";
-// import { UserContext } from "./UserContext";
+// import { useState } from "react";
 
-// export const StoryContext = createContext();
+// // Gestion des données utilisateurs
+// const dataUser =
+// // TODO : A changer ici celon le cas
+// {
+//     nom: "Dilmamode",
+//     prenom: "Yasmine",
+//     // nomInterlocuteur: "John Doe", 
+//     nomInterlocuteur: null,
+//     cursus: "EISI",
+//     contrat: "alternance",
+//     motif: "savoir où en est ma candidature"
 
-// // let user = [];
+//     // nom: null,
+//     // prenom: null,
+//     // // nomInterlocuteur: "John Doe", 
+//     // nomInterlocuteur: null,
+//     // cursus: null,
+//     // contrat: null,
+//     // motif: null
+// };
+
+
+
 // let msg = null;
 
-// // const ApplyUserData = () => {
-// //     const userData = useContext(UserContext);
-// //     user.pop();
-// //     user.push(userData);
 
-// //     if (user.nomInterlocuteur === null) {
-// //         msg = "la personne chargée du recrutement ou des relations écoles";
-// //     }
-// //     else {
-// //         msg = `Mme/Mr ${user.nomInterlocuteur}`;
-// //     }
-
-// //     return user
-// // }
-
-// // const ApplyStoryContext = (index) => {
-// //     const [storyContext,setStoryContext] = useState( {} );
-
-// //     storyData.forEach( e => {
-// //         if (e.id === index) {
-// //             console.log(e);
-// //         }
-// //     });
-
-// // }
-// const Userr = useContext(UserContext);
-
-
-// // const useUser = () =>  {
-
-// //     if (useUser.nomInterlocuteur === null) {
-// //         msg = "la personne chargée du recrutement ou des relations écoles";
-// //     }
-// //     else {
-// //         msg = `Mme/Mr ${useUser.nomInterlocuteur}`;
-// //     }
-    
-// //     return useContext(UserContext);
-
-// // };
-
-// // useUser;
-
-// // ApplyUserData()
-
-// console.log({ Userr })
-
-// const storyData = [
+// // Gestion des données "histoire"
+// const dataStory = [
 
 //     {
 //         id: 0,
-//         title: `Bonjour, ${useUser.prenom} ${useUser.nom} étudiante à l'EPSI, je cherche à joindre ${msg}, s'il vous plait.`,
+//         title: `Bonjour, ${dataUser.prenom} ${dataUser.nom} étudiante à l'EPSI, je cherche à joindre ${msg}, s'il vous plait.`,
 //         choiceOne: { text: "Oui, je vous passe le service.", target: "/etape5" }, // HOURA 
 //         choiceTwo: { text: "C'est à quel sujet ?", target: "/etape1" }, // Go to 1
 //         choiceThree: { text: "Il n'est pas disponible pour le moment.", target: "/etape3" }, // Go to 3
@@ -74,7 +48,7 @@
 //     // Cas si demande plus d'info
 //     {
 //         id: 2,
-//         title: `Je suis étudiant(e) en ${useUser.cursus}  et votre entreprise m'intéresse pour effectuer mon ${useUser.contrat} et je souhaite ${useUser.motif}`,
+//         title: `Je suis étudiant(e) en ${dataUser.cursus}  et votre entreprise m'intéresse pour effectuer mon ${dataUser.contrat} et je souhaite ${dataUser.motif}`,
 //         choiceOne: { text: "Je vous laisse dans un premier temps nous envoyer un mail.", target: "/etape4" }, // Go to 4
 //         choiceTwo: { text: null, target: "/" },
 //         choiceThree: { text: null, target: "/" },
@@ -107,22 +81,29 @@
 // ]
 
 
-// // const chooseStoryData = (index) => {
-// //     storyData.find(item => item.id === 0)
-
-// // };
 
 
-// // console.log(chooseStoryData());
+
+// export default function Data() {
+
+//     // const [user, setUser] = useState(dataUser);
+
+//     const [user, setUser] = useState(
+//         {
+//             nom: null,
+//             prenom: null,
+//             // nomInterlocuteur: "John Doe", 
+//             nomInterlocuteur: null,
+//             cursus: null,
+//             contrat: null,
+//             motif: null
+//         }
+//     );
 
 
-// export const StoryDataProvider = ({ children }) => {
-    
-//     const [story] = useState(storyData);
 
-//     return (
-//         <StoryContext.Provider value={{ story}}>
-//             {children}
-//         </StoryContext.Provider>
-//     )
+//     const story = useState(dataStory);
+
+
+
 // }

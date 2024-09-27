@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Choose from "./main/Choose";
-import Template from "./main/Template";
+// import Template from "./main/Template";
+import Base from "./main/Base";
 
 export default function NavigationRoutes() {
 
@@ -9,7 +10,7 @@ export default function NavigationRoutes() {
             <Routes>
 
                 {/* <Route path='/' element={<App />} /> */}
-                <Route path='/' element={<Template />} />
+                <Route path='/' element={<Base />} />
                 <Route path='/etape0' element={<Choose index={0} />} />
                 <Route path='/etape1' element={<Choose index={1} />} />
                 <Route path='/etape2' element={<Choose index={2} />} />

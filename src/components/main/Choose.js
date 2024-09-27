@@ -1,13 +1,13 @@
-import { useContext } from "react";
-// import { data } from "../../data/DatasStory.js";
+// import { useContext } from "react";
+import { data } from "../../data/DatasStory.js";
 
 // import { data } from "../../data/DatasStory.js";
 
 import Button from "./Button.js";
-import { UserContext } from "../../context/UserContext.js";
+// import { UserContext } from "../../context/UserContext.js";
 
-import { StoryContext } from "../../context/StoryContext.js";
-import { ContextDataProvider } from "../../context/Context.js";
+// import { StoryContext } from "../../context/StoryContext.js";
+// import { ContextDataProvider } from "../../context/Context.js";
 
 export default function Choose({ index }) {
 
@@ -15,13 +15,13 @@ export default function Choose({ index }) {
 
     // const stor = useContext(StoryContext)
 
-    const context = useContext(storyData);
+    // const context = useContext(storyData);
 
-    console.log(context);
+    // console.log(context);
 
     // stor.story
 
-    // const stor = data.find(item => item.id === index);
+    const stor = data.find(item => item.id === index);
     // console.log({ stor });
 
     // const {n, setN} = [];
@@ -49,8 +49,8 @@ export default function Choose({ index }) {
 
     return (
 
-        <div className="question" > {/* id={stor.id}*/}
-         {/*    <h6> Etape {index} </h6>
+        <div className="question" id={stor.id}> {/* */}
+            <h6> Etape {index} </h6>
 
             
              <p className="mineText">{stor.title}</p> 
@@ -61,7 +61,7 @@ export default function Choose({ index }) {
                 <Button message={stor.choiceOne.text} target={stor.choiceOne.target} />
                 <Button message={stor.choiceTwo.text} target={stor.choiceTwo.target}/>
                 <Button message={stor.choiceThree.text} target={stor.choiceThree.target} />                
-            </div> */}
+            </div>
 
         </div>
     )

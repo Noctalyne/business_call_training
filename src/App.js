@@ -2,41 +2,41 @@ import './style/App.css';
 
 import NavigationRoutes from './components/NavigationRoutes.js';
 import Header from './components/header/Header.js';
-import { UserDataProvider } from './context/UserContext.js';
-import { StoryDataProvider } from './context/StoryContext.js';
-import { ContextDataProvider } from './context/Context.js';
-
-// import Formulaire from './Formulaire';
+// import { useState } from 'react';
 
 function App() {
 
+  // const [user, setUser] = useState(
+  //   {
+  //     nom: null,
+  //     prenom: null,
+  //     // nomInterlocuteur: "John Doe", 
+  //     nomInterlocuteur: null,
+  //     cursus: null,
+  //     contrat: null,
+  //     motif: null
+  //   }
+  // );
+
   return (
     <>
+      <div className="App">
 
-      {/* <UserDataProvider>
-        <StoryDataProvider> */}
+        <header className="App-header">
 
-        <ContextDataProvider>
-          <div className="App">
+          <Header />
 
-            <header className="App-header">
+        </header>
 
-              <Header />
+        <main className='mainContainer'>
 
-            </header>
+          {/* Function pour gérer les routes */}
+          <NavigationRoutes />
 
-            <main className='mainContainer'>
+        </main>
 
-              {/* Function pour gérer les routes */}
-              <NavigationRoutes />
+      </div>
 
-            </main>
-
-          </div>
-          
-          </ContextDataProvider>
-        {/* </StoryDataProvider>
-      </UserDataProvider> */}
 
 
     </>
