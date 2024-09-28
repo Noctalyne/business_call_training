@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
-import Formulaire from "../../story/Formulaire";
+import Formulaire from "../main/Formulaire";
 import { useState } from "react";
-import DeleteDataUser from "../DeleteDataUser";
+import DeleteDataUser from "../../data/DeleteDataUser";
+
+import { user } from "../../data/Datas"
 
 
 export default function Base() {
 
+    // Utilides données
+    const userLocal = user;
 
-    const user = JSON.parse(localStorage.getItem("user"));
 
-    // Paramètre pour le formulaire
+    // Paramètres pour le formulaire
     const [input, setInput] = useState(null);
 
     const handleOnChange = e => {
@@ -17,29 +20,24 @@ export default function Base() {
         setInput({ ...input, [e.target.name]: e.target.value });
     }
 
-    const handleOnSubmit = f => {
-        f.preventDefault();
-        localStorage.setItem("user", JSON.stringify(user))
+    const handleOnSubmit = () => {
+        localStorage.removeItem("user");
+        localStorage.setItem("user", JSON.stringify(input))
     }
 
+    console.log(input);
 
-    // console.log(localStorage);
-    // console.log(user);
+//
 
-    if (user.nom === null || user.prenom === null || user.cursus === null || user.contrat === null || user.motif === null) {
-        // console.log(user);
+    if (!userLocal.nom || !userLocal.prenom || !userLocal.genderInterlocuteur ||  !userLocal.nomInterlocuteur || !userLocal.cursus || !userLocal.contrat || !userLocal.motif) {
         return (<Formulaire onChange={handleOnChange} onSubmit={handleOnSubmit} />)
     }
     else {
-        localStorage.setItem("user", JSON.stringify(user));
         return (
             <>
                 <Link to="/etape0" className="" >Commencer</Link>
-                <DeleteDataUser/>
+                <DeleteDataUser />
             </>
         )
     }
-
-
-
 }

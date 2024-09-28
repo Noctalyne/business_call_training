@@ -1,0 +1,40 @@
+
+.form_container {
+    width: 90%;
+    display: flex;
+
+    justify-content: center;
+    
+}
+
+.formulaire {
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.formulaire input, .formulaire select {
+    /* width: 50%; */
+    height: 40px;
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.formulaire div {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.formulaire button {
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+}

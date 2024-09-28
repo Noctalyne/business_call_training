@@ -1,46 +1,33 @@
-// import { redirect } from "react-router-dom";
 
-import { redirect } from "react-router-dom";
+// Initialisation et export des données utilisateur
+export const user = JSON.parse(localStorage.getItem("user"));
 
+if (!user) {
+    let localeUser = { nom: null, prenom: null, genderInterlocuteur:null, nomInterlocuteur: null, cursus: null, contrat: null, motif: null };
+    localStorage.setItem("user", JSON.stringify(localeUser))
+}
+
+// export const dataForm = {
+//     {
+
+//     }
+// }
+
+
+// Initialisation du texte celon les donnéess
 
 let msg = null;
 
+if (!user.nomInterlocuteur && user.nomInterlocuteur === null) {
+    msg = "la personne chargée du recrutement ou des relations écoles";
+}
+else {
+    msg = `${user.genderInterlocuteur} ${user.nomInterlocuteur}`;
+}
 
 
-// const user = [
-//     {
-//         nom: "",
-//         prenom: "",
-//         // nomInterlocuteur: "John Doe", 
-//         nomInterlocuteur: "",
-//         cursus: "",
-//         contrat: "",
-//         motif: ""
-//     }
-// ]
-
-const user = JSON.parse(localStorage.getItem("user"));
-
-
-// if (!localStorage.getItem("user")) {
-
-//     redirect ("/")
-// } 
-// else {
-// if (user.nomInterlocuteur === null) {
-//     msg = "la personne chargée du recrutement ou des relations écoles";
-// }
-// else {
-//     msg = `Mme/Mr ${user.nomInterlocuteur}`;
-// }
-
-// }
-
-
-
-
+// Export des données finales d'affichage
 export const data = [
-
     {
         id: 0,
         title: `Bonjour, ${user.prenom} ${user.nom} étudiante à l'EPSI, je cherche à joindre ${msg}, s'il vous plait.`,

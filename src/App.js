@@ -2,21 +2,17 @@ import './style/App.css';
 
 import NavigationRoutes from './components/NavigationRoutes.js';
 import Header from './components/header/Header.js';
-// import { useState } from 'react';
 
 function App() {
 
-  // const [user, setUser] = useState(
-  //   {
-  //     nom: null,
-  //     prenom: null,
-  //     // nomInterlocuteur: "John Doe", 
-  //     nomInterlocuteur: null,
-  //     cursus: null,
-  //     contrat: null,
-  //     motif: null
-  //   }
-  // );
+  let user = { nom: null, prenom: null, nomInterlocuteur: null, cursus: null, contrat: null, motif: null };
+
+  const dataUs = JSON.parse(localStorage.getItem("user"))
+
+  if (!dataUs) {
+    localStorage.setItem("user", JSON.stringify(user))
+  }
+
 
   return (
     <>
@@ -36,8 +32,6 @@ function App() {
         </main>
 
       </div>
-
-
 
     </>
   )
