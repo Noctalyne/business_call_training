@@ -24,6 +24,12 @@ export default function Formulaire({ onSubmit, onChange }) {
 
                     {/* La personne qu'on veux joindre */}
                     <div>
+                        <label>Connaissez vous la personne ? </label>
+                        <input type='radio' onChange={onChange} name="recipient" value="true" /> Oui
+                        <input type='radio' onChange={onChange} name="recipient" value="false" /> Non
+                    </div>
+
+                    <div>
                         <label>Ajouter le nom de la personne que vous voulez joindre</label>
                         <select onChange={onChange} name='genderInterlocuteur'>
                             <option value="Autres">Civilité</option>

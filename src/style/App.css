@@ -40,47 +40,49 @@
 
 
 
-
+@import url('themes.css');
 
 /* PERSO EN ATTENTE DE REWORKS */
 
-body {
-  /* background-color:#282c34 !important; */
-}
+/* body {
+  background-color: var(--primary);
+} */
 
 
 /* HEADER */
 
-.App {
+/* .App {
   width: 90%;
   margin: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 
-}
+} */
 
-.top {
+/* .top { */
+
+/* header div { 
 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
 
-  /* text-align: center; */
+} */
 
-}
-
-.HeaderNavBar {
+/* .HeaderNavBar {
 
   align-content: center;
   margin: 20px;
 
-}
+} */
 
-.navLink {
+/* .navLink {
   padding: 10px;
   margin: 10px;
-}
+} */
 
 
 
@@ -88,7 +90,7 @@ body {
 
 /* MAIN */
 
-.mainContainer {
+/* .mainContainer {
   
 }
 
@@ -137,4 +139,108 @@ a {
   align-items: center;
   font-size: 30px;
 
+} */
+
+
+/* GENERAL */
+body {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: auto;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+
+
+button {
+  background-color: var(--third);
+  border: 1px solid var(--secondary);
+  border-radius: 15px;
+  height: auto;
+  padding: 3%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary);
+
+}
+
+/* HEADER */
+.header_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.header_content div {
+  width: 30%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* .navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: start;
+} */
+
+/* MAIN CONTENT */
+
+.main_container div {
+  /* height: 85vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.conv_mine_text {}
+
+
+.conv_choices {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.conv_choices div {
+  height: 60px;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  padding: 3%;
+  margin: 10px 5px;
+}
+
+/* Super */
+.great {
+  background-color: green;
+}
+
+
+/* Good */
+.good {
+  background-color: orange;
+}
+
+
+/* Bad */
+.bad {
+  background-color: red;
 }

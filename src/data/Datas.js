@@ -1,27 +1,21 @@
-
 // Initialisation et export des données utilisateur
 export const user = JSON.parse(localStorage.getItem("user"));
 
 if (!user) {
-    let localeUser = { nom: null, prenom: null, genderInterlocuteur:null, nomInterlocuteur: null, cursus: null, contrat: null, motif: null };
+    let localeUser = { nom: null, prenom: null, recipient: false, genderInterlocuteur: null, nomInterlocuteur: null, cursus: null, contrat: null, motif: null };
     localStorage.setItem("user", JSON.stringify(localeUser))
 }
 
-// export const dataForm = {
-//     {
-
-//     }
-// }
 
 
 // Initialisation du texte celon les donnéess
 
 let msg = null;
 
-if (!user.nomInterlocuteur && user.nomInterlocuteur === null) {
+if (!user.genderInterlocuteur && !user.nomInterlocuteur) {
     msg = "la personne chargée du recrutement ou des relations écoles";
 }
-else {
+else if (user.genderInterlocuteur && user.nomInterlocuteur) {
     msg = `${user.genderInterlocuteur} ${user.nomInterlocuteur}`;
 }
 
@@ -31,9 +25,9 @@ export const data = [
     {
         id: 0,
         title: `Bonjour, ${user.prenom} ${user.nom} étudiante à l'EPSI, je cherche à joindre ${msg}, s'il vous plait.`,
-        choiceOne: { text: "Oui, je vous passe le service.", target: "/etape5" }, // HOURA 
-        choiceTwo: { text: "C'est à quel sujet ?", target: "/etape1" }, // Go to 1
-        choiceThree: { text: "Il n'est pas disponible pour le moment.", target: "/etape3" }, // Go to 3
+        choiceOne: { text: "Oui, je vous passe le service.", target: "/etape5", style: "great" }, // HOURA 
+        choiceTwo: { text: "C'est à quel sujet ?", target: "/etape1", style: "good" }, // Go to 1
+        choiceThree: { text: "Il n'est pas disponible pour le moment.", target: "/etape3", style: "bad" }, // Go to 3
     },
 
 
@@ -42,7 +36,7 @@ export const data = [
         id: 1,
         title: "Je souhaite faire le point avec cette personne sur une offre en cours",
         choiceOne: { text: "Je ne comprend pas, vous êtes une école, une entreprise ? Vous avec déjà eu un premier contact ? ", target: "/etape2" }, // Go to 2
-        choiceTwo: { text: "Il n'est pas disponible pour le moment.", target: "/etape3" }, // Go to 3
+        choiceTwo: { text: "Il n'est pas disponible pour le moment.", target: "/etape3" , style: "bad"}, // Go to 3
         choiceThree: { text: null, target: "/" },
     },
 
@@ -66,7 +60,7 @@ export const data = [
     {
         id: 4,
         title: "Très bien, je vous écoute pour l'adresse mail.",
-        choiceOne: { text: "Retour", target: "/" },
+        choiceOne: { text: "Retour", target: "/etape0" },
         choiceTwo: { text: null, target: "/" },
         choiceThree: { text: null, target: "/" },
     },
@@ -74,8 +68,8 @@ export const data = [
     {
         id: 5,
         title: "BRAVO",
-        choiceOne: { text: "Retour", target: "/" },
-        choiceTwo: { text: null, target: "/" },
+        choiceOne: { text: "Modifier mes informations", target: "/etape0" },
+        choiceTwo: { text: "Recommencer", target: "/etape0" },
         choiceThree: { text: null, target: "/" },
     }
 

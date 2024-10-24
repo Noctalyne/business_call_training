@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 import Formulaire from "../main/Formulaire";
 import { useState } from "react";
-import DeleteDataUser from "../../data/DeleteDataUser";
+// import DeleteDataUser from "../../data/DeleteDataUser";
 
 import { user } from "../../data/Datas"
 
 
 export default function Base() {
 
-    // Utilides données
+    // Utilises données
     const userLocal = user;
-
 
     // Paramètres pour le formulaire
     const [input, setInput] = useState(null);
@@ -25,18 +24,17 @@ export default function Base() {
         localStorage.setItem("user", JSON.stringify(input))
     }
 
-    console.log(input);
-
-//
-
-    if (!userLocal.nom || !userLocal.prenom || !userLocal.genderInterlocuteur ||  !userLocal.nomInterlocuteur || !userLocal.cursus || !userLocal.contrat || !userLocal.motif) {
+    if (!userLocal.nom || !userLocal.prenom || !userLocal.cursus || !userLocal.contrat || !userLocal.motif) {
+        // console.log(userLocal);
         return (<Formulaire onChange={handleOnChange} onSubmit={handleOnSubmit} />)
     }
     else {
         return (
             <>
+            <div>
                 <Link to="/etape0" className="" >Commencer</Link>
-                <DeleteDataUser />
+            </div>
+                
             </>
         )
     }

@@ -1,18 +1,15 @@
 import { Link } from "react-router-dom";
+// import DeleteDataUser from "../../data/DeleteDataUser";
 
 export default function NavBar() {
 
     return (
+        // Changer ici si plus tard ajout d'un backend
         <>
-            <nav className="HeaderNavBar">
-
+            <nav className="navbar_link">
+                {/* <DeleteDataUser /> */}
                 {/* <Link to="/" className="navLink">Accueil</Link> */}
-                <Link to="/etape0" className="navLink">etape0</Link>
-                {/* <Link to="/etape1" className="navLink">etape1</Link>
-                <Link to="/etape2" className="navLink">etape2</Link>
-                <Link to="/etape3" className="navLink">etape3</Link>
-                <Link to="/etape4" className="navLink">etape4</Link>
-                <Link to="/etape5" className="navLink">etape5</Link> */}
+                {/* <Link to="/etape0" className="navLink">etape0</Link> */}
             </nav>
 
         </>

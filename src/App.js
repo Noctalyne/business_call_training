@@ -24,12 +24,14 @@ function App() {
 
         </header>
 
-        <main className='mainContainer'>
-
+        <main className='main_container'>
           {/* Function pour gérer les routes */}
           <NavigationRoutes />
-
         </main>
+
+        <footer>
+
+        </footer>
 
       </div>
 
