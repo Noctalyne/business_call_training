@@ -1,4 +1,4 @@
-
+/* 
 .form_container {
     width: 90%;
     display: flex;
@@ -16,7 +16,6 @@
 }
 
 .formulaire input, .formulaire select {
-    /* width: 50%; */
     height: 40px;
     margin: 15px;
     border: 1px solid black;
@@ -37,4 +36,4 @@
     height: 50px;
     border: 1px solid black;
     border-radius: 10px;
-}
+} */
