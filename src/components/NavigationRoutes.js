@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Conversation from "./main/Conversation";
 // import Template from "./main/Template";
 import Base from "./main/Base";
+import Formulaire from "./forms/Formulaire";
 
 export default function NavigationRoutes() {
 
@@ -11,6 +12,7 @@ export default function NavigationRoutes() {
 
                 {/* <Route path='/' element={<App />} /> */}
                 <Route path='/' element={<Base />} />
+                <Route path='/form' element={<Formulaire />} />
                 <Route path='/etape0' element={<Conversation index={0} />} />
                 <Route path='/etape1' element={<Conversation index={1} />} />
                 <Route path='/etape2' element={<Conversation index={2} />} />

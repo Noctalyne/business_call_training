@@ -35,7 +35,7 @@ export const data = [
     {
         id: 1,
         title: "Je souhaite faire le point avec cette personne sur une offre en cours",
-        choiceOne: { text: "Je ne comprend pas, vous êtes une école, une entreprise ? Vous avec déjà eu un premier contact ? ", target: "/etape2" }, // Go to 2
+        choiceOne: { text: "Je ne comprend pas, vous êtes une école, une entreprise ? Vous avec déjà eu un premier contact ? ", target: "/etape2" , style: "good"  }, // Go to 2
         choiceTwo: { text: "Il n'est pas disponible pour le moment.", target: "/etape3" , style: "bad"}, // Go to 3
         choiceThree: { text: null, target: "/" },
     },
@@ -44,7 +44,7 @@ export const data = [
     {
         id: 2,
         title: `Je suis étudiant(e) en ${user.cursus}  et votre entreprise m'intéresse pour effectuer mon ${user.contrat} et je souhaite ${user.motif}`,
-        choiceOne: { text: "Je vous laisse dans un premier temps nous envoyer un mail.", target: "/etape4" }, // Go to 4
+        choiceOne: { text: "Je vous laisse dans un premier temps nous envoyer un mail.", target: "/etape4", style: "good" }, // Go to 4
         choiceTwo: { text: null, target: "/" },
         choiceThree: { text: null, target: "/" },
     },
@@ -52,15 +52,15 @@ export const data = [
     {
         id: 3,
         title: "A quel moment puis je le/la rappeler ?",
-        choiceOne: { text: "Prise de note, Fin , merci retour", target: "/" }, // Je vous remercie pour votre accueil, bonne fin de journée
-        choiceTwo: { text: "Ne veux pas répondre", target: "/" },
+        choiceOne: { text: "Prise de note, Fin , merci retour", target: "/" , style: "good" }, // Je vous remercie pour votre accueil, bonne fin de journée
+        choiceTwo: { text: "Ne veux pas répondre", target: "/", style: "bad"  },
         choiceThree: { text: null, target: "/" },
     },
 
     {
         id: 4,
         title: "Très bien, je vous écoute pour l'adresse mail.",
-        choiceOne: { text: "Retour", target: "/etape0" },
+        choiceOne: { text: "Retour", target: "/etape0", style: "neutral"  },
         choiceTwo: { text: null, target: "/" },
         choiceThree: { text: null, target: "/" },
     },
@@ -68,8 +68,8 @@ export const data = [
     {
         id: 5,
         title: "BRAVO",
-        choiceOne: { text: "Modifier mes informations", target: "/etape0" },
-        choiceTwo: { text: "Recommencer", target: "/etape0" },
+        choiceOne: { text: "Modifier mes informations", target: "/etape0", style: "neutral" },
+        choiceTwo: { text: "Recommencer", target: "/etape0", style: "neutral" },
         choiceThree: { text: null, target: "/" },
     }
 

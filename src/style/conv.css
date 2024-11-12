@@ -1,0 +1,49 @@
+@import url('themes.css');
+
+.conversation {
+    min-height: 90vh !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    
+  }
+  
+  .conv_choices {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .conv_choices div {
+    width: 100%;
+    border: 1px solid var(--secondary);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 10px 5px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Super */
+  .great {
+    background-color:var(--fourth);
+  }
+  
+  
+  /* Good */
+  .good {
+    background-color:var(--fifth);
+  }
+  
+  
+  /* Bad */
+  .bad {
+    background-color: var(--sixth);
+  }
+  
+  .neutral {
+    background-color: var(--third);
+  }

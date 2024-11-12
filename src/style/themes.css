@@ -1,11 +1,14 @@
 [theme="light"] {
     --primary: #FFFFFF;
     --secondary: #000000;
-    --third: gray;
-    --fourth: #;
-    --fifth: #;
-    --sixth: #;
+    --third: #dadbe7;
+    --fourth: #c2ffc2;
+    --fifth: #ffeac2;
+    --sixth: #ffc2cd;
     --seventh: #;
 }
 
-/* 402843 */
+/* 402843 
+
+663399
+*/
